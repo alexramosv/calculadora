@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+button:hover{
+  background-color: whitesmoke;
+}
+
+button:active {
+  background-color: gray
+}
+
+.botonDivision:hover, .botonX:hover, .botonMenos:hover, .botonMas:hover, .botonIgual:hover {
+  background-color: coral;
+}
+
+.botonDivision:active, .botonX:active, .botonMenos:active, .botonMas:active, .botonIgual:active {
+  background-color: orangered;
+}
+
+#calculadora {
+  width: 400px;
+background-color: black;
+color: white;
+}
+
+.filaCabecera {
+  color: white;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: right;
+  padding: 20px 5px;
+}
+
+.primeraFila {
+  display: flex;
+  align-content: stretch;
+  justify-content: space-between;
+  margin-bottom: 0.5%;
+}
+
+.botonC {
+  background-color: silver;
+  color: black;
+  height: 100px;
+  width: 49.7%;
+  border: none;
+  border-radius: 0;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.botonFlecha{
+  background-color: silver;
+  color: black;
+  height: 100px;
+  width: 24.5%;
+  border: none;
+  border-radius: 0;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.botonDivision {
+  background-color: orange;
+  color: white;
+  height: 100px;
+  width: 24.5%;
+  border: none;
+  border-radius: 0;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.segundaFila {
+display: flex;
+align-content: stretch;
+justify-content: space-between;
+margin-bottom: 0.5%;
+}
+
+.boton7 {
+  background-color: silver;
+  color: black;
+  height: 100px;
+  width: 24.5%;
+  border: none;
+  border-radius: 0;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.boton8 {
+  background-color: silver;
+    color: black;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.boton9 {
+  background-color: silver;
+    color: black;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.botonX {
+  background-color: orange;
+  color: white;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.terceraFila {
+  display: flex;
+align-content: stretch;
+justify-content: space-between;
+margin-bottom: 0.5%;
+}
+
+.boton4 {
+  background-color: silver;
+    color: black;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.boton5 {
+  background-color: silver;
+    color: black;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.boton6 {
+  background-color: silver;
+    color: black;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.botonMenos {
+  background-color: orange;
+  color: white;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.cuartaFila {
+  display: flex;
+align-content: stretch;
+justify-content: space-between;
+margin-bottom: 0.5%;
+}
+
+.boton1 {
+  background-color: silver;
+    color: black;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.boton2 {
+  background-color: silver;
+    color: black;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.boton3 {
+  background-color: silver;
+    color: black;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.botonMas {
+  background-color: orange;
+  color: white;
+    height: 100px;
+    width: 24.5%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.quintaFila {
+  display: flex;
+  align-content: stretch;
+  justify-content: space-between;
+  margin-bottom: 0.5%;
+}
+
+.boton0 {
+  background-color: silver;
+    color: black;
+    height: 100px;
+    width: 74.8%;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.botonIgual {
+background-color: orange;
+color: white;
+height: 100px;
+width: 24.5%;
+border: none;
+border-radius: 0;
+font-size: 40px;
+cursor: pointer;
+}
+
