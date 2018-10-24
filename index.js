@@ -6,6 +6,8 @@ evento.addEventListener("keyup", onKeyUp);*/
 
 let contador = 0;
 let nuevoNumero = 0;
+let prueba = 5;
+let operador = "";
 
 function onClick(evento) {
   const resultado = document.querySelector(".filaCabecera");
@@ -19,12 +21,34 @@ console.log(`Clicado el  ${evento.target.innerText}`);
     resultado.innerText  = "0";
     break;
     case "+":
-    resultado.innerText  = String(parseInt(contador) + 5);
-    break
+    nuevoNumero  = contador;
+    operador = evento.target.innerText;
+    console.log(`operador : ${operador}`);
+    break;
+    case "-":
+    nuevoNumero  = contador;
+    operador = evento.target.innerText;
+    console.log(`operador : ${operador}`);
+    break;
+    case "x":
+    nuevoNumero  = contador;
+    operador = evento.target.innerText;
+    console.log(`operador : ${operador}`);
+    break;
+    case "/":
+    nuevoNumero  = contador;
+    operador = evento.target.innerText;
+    console.log(`operador : ${operador}`);
+    break;
+    case "=":
+    resultado.innerText  = String(parseInt(nuevoNumero) + parseInt(contador));
+    break;
   }
  
   contador = evento.target.innerText;
-  console.log(contador);
+  console.log(`Este es el contador: ${contador}`);
+  console.log(`Este es el nuevoNumero; ${nuevoNumero}`);
+  console.log(`Este es el prueba: ${prueba}`)
 /*
   nuevoNumero = evento.target.innerText;
   console.log(nuevoNumero);
