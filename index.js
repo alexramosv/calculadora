@@ -32,7 +32,7 @@ console.log(`Clicado el  ${evento.target.innerText}`);
     break;
     case "x":
     nuevoNumero  = contador;
-    operador = evento.target.innerText;
+    operador = "*";
     console.log(`operador : ${operador}`);
     break;
     case "/":
@@ -41,63 +41,33 @@ console.log(`Clicado el  ${evento.target.innerText}`);
     console.log(`operador : ${operador}`);
     break;
     case "=":
-    resultado.innerText  = String(parseInt(nuevoNumero) + parseInt(contador));
+    jugandoConOperadores(operador);
+    function jugandoConOperadores(operador) {
+      switch (operador) {
+        case "+":
+        resultado.innerText = String(parseInt(nuevoNumero) + parseInt(contador));
+        break;
+        case "*":
+        resultado.innerText = String(parseInt(nuevoNumero) * parseInt(contador));
+        break;
+        case "-":
+        resultado.innerText = String(parseInt(nuevoNumero) - parseInt(contador));
+        break;
+        case "/":
+        resultado.innerText = String(parseInt(nuevoNumero) / parseInt(contador));
+        break;
+      }
+    }
     break;
   }
  
   contador = evento.target.innerText;
   console.log(`Este es el contador: ${contador}`);
   console.log(`Este es el nuevoNumero; ${nuevoNumero}`);
-  console.log(`Este es el prueba: ${prueba}`)
-/*
-  nuevoNumero = evento.target.innerText;
-  console.log(nuevoNumero);
-  */
+  console.log(`Este es el prueba: ${prueba}`);
+
 } 
 
 
-/*+ numero2 ;
 
 
-  
-/*
-tiene que ir un switch
-*/
-/*
-switch (resultado) {
-  case '+':
-    console.log('Vamos a sumar');
-    break;}
-}
-*/
-
-
-
-/*
-document.querySelector(".teclado").addEventListener("click", onClick);
-
-function onClick(event) {
-  if (event.target.tagName === "BUTTON") {
-    alert(`You clicked on button ${event.target.innerText}`);
-  }
-}
-
-*/
-
-/*
-
-var expr = 'Papayas';
-switch (expr) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
-    break;
-  case 'Mangoes':
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
-    // expected output: "Mangoes and papayas are $2.79 a pound."
-    break;
-  default:
-    console.log('Sorry, we are out of ' + expr + '.');
-}
-
-*/
