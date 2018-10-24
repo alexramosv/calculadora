@@ -1,19 +1,15 @@
 const evento = document.querySelector(".teclado");
 const resultado = document.querySelector(".filaCabecera");
 
-evento.addEventListener("click", onClick);/*
-evento.addEventListener("keyup", onKeyUp);*/
+evento.addEventListener("click", onClick);
 
-let contador = 0;
-let nuevoNumero = 0;
-let prueba = 5;
 let operador = "";
+let primeraVariable= "";
+let segundaVariable= "";
 
 function onClick(evento) {
   const resultado = document.querySelector(".filaCabecera");
   resultado.innerText = evento.target.innerText;
-
-  
 
 console.log(`Clicado el  ${evento.target.innerText}`);
   switch (evento.target.innerText) {
@@ -21,22 +17,26 @@ console.log(`Clicado el  ${evento.target.innerText}`);
     resultado.innerText  = "0";
     break;
     case "+":
-    nuevoNumero  = contador;
+    segundaVariable = primeraVariable;
+    primeraVariable = "";
     operador = evento.target.innerText;
     console.log(`operador : ${operador}`);
     break;
     case "-":
-    nuevoNumero  = contador;
+    segundaVariable = primeraVariable;
+    primeraVariable = "";
     operador = evento.target.innerText;
     console.log(`operador : ${operador}`);
     break;
     case "x":
-    nuevoNumero  = contador;
+    segundaVariable = primeraVariable;
+    primeraVariable = "";
     operador = "*";
     console.log(`operador : ${operador}`);
     break;
     case "/":
-    nuevoNumero  = contador;
+    segundaVariable = primeraVariable;
+    primeraVariable = "";
     operador = evento.target.innerText;
     console.log(`operador : ${operador}`);
     break;
@@ -45,29 +45,31 @@ console.log(`Clicado el  ${evento.target.innerText}`);
     function jugandoConOperadores(operador) {
       switch (operador) {
         case "+":
-        resultado.innerText = String(parseInt(nuevoNumero) + parseInt(contador));
+        resultado.innerText = String(parseInt(segundaVariable) + parseInt(primeraVariable));
         break;
         case "*":
-        resultado.innerText = String(parseInt(nuevoNumero) * parseInt(contador));
+        resultado.innerText = String(parseInt(segundaVariable) * parseInt(primeraVariable));
         break;
         case "-":
-        resultado.innerText = String(parseInt(nuevoNumero) - parseInt(contador));
+        resultado.innerText = String(parseInt(segundaVariable) - parseInt(primeraVariable));
         break;
         case "/":
-        resultado.innerText = String(parseInt(nuevoNumero) / parseInt(contador));
+        resultado.innerText = String(parseInt(segundaVariable) / parseInt(primeraVariable));
         break;
-      }
-    }
+      };
+    };
+    primeraVariable = "";
     break;
+    default:
+    primeraVariable = primeraVariable + evento.target.innerText;
+    resultado.innerText = primeraVariable
+    
+    
+
   }
  
-  contador = evento.target.innerText;
-  console.log(`Este es el contador: ${contador}`);
-  console.log(`Este es el nuevoNumero; ${nuevoNumero}`);
-  console.log(`Este es el prueba: ${prueba}`);
+  console.log(`Esta es la primera variable: ${primeraVariable}`);
+  console.log(`segunda variable: ${segundaVariable}`);
+
 
 } 
-
-
-
-
