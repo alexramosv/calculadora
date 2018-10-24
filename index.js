@@ -11,16 +11,36 @@ function onClick(evento) {
   const resultado = document.querySelector(".filaCabecera");
   resultado.innerText = evento.target.innerText;
 
-console.log(`Clicado el  ${evento.target.innerText}`);
+console.log(`Clickando el  ${evento.target.innerText}`);
   switch (evento.target.innerText) {
     case "c":
     resultado.innerText  = "0";
+    primeraVariable = "";
     break;
     case "+":
     segundaVariable = primeraVariable;
     primeraVariable = "";
     operador = evento.target.innerText;
     console.log(`operador : ${operador}`);
+    break;
+
+    
+    case "←":
+    operador = evento.target.innerText;
+    primeraVariable.slice(0, -1);
+    resultado.innerText = primeraVariable.slice(0, -1);
+
+    if (operador = "←") {
+      primeraVariable = primeraVariable.slice(0, -1);
+      } 
+      /*
+      else (primeraVariable = "") {
+  primeraVariable = "0";
+  resultado.innerText  = primeraVariable;
+};
+
+*/
+
     break;
     case "-":
     segundaVariable = primeraVariable;
@@ -63,13 +83,12 @@ console.log(`Clicado el  ${evento.target.innerText}`);
     default:
     primeraVariable = primeraVariable + evento.target.innerText;
     resultado.innerText = primeraVariable
-    
-    
-
   }
  
+
+  
   console.log(`Esta es la primera variable: ${primeraVariable}`);
   console.log(`segunda variable: ${segundaVariable}`);
 
 
-} 
+} ;
