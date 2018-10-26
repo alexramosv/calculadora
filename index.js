@@ -17,6 +17,7 @@ console.log(`Clickando el  ${evento.target.innerText}`);
     resultado.innerText  = "0";
     primeraVariable = "";
     break;
+
     case "+":
     segundaVariable = primeraVariable;
     primeraVariable = "";
@@ -24,42 +25,40 @@ console.log(`Clickando el  ${evento.target.innerText}`);
     console.log(`operador : ${operador}`);
     break;
 
-    
     case "←":
     operador = evento.target.innerText;
     primeraVariable.slice(0, -1);
     resultado.innerText = primeraVariable.slice(0, -1);
-
     if (operador = "←") {
       primeraVariable = primeraVariable.slice(0, -1);
       } 
-      /*
-      else (primeraVariable = "") {
-  primeraVariable = "0";
-  resultado.innerText  = primeraVariable;
-};
-
-*/
-
+    if (primeraVariable === "") {
+      primeraVariable = "0";
+      resultado.innerText  = primeraVariable;
+      };
     break;
+
     case "-":
     segundaVariable = primeraVariable;
     primeraVariable = "";
     operador = evento.target.innerText;
     console.log(`operador : ${operador}`);
     break;
+
     case "x":
     segundaVariable = primeraVariable;
     primeraVariable = "";
     operador = "*";
     console.log(`operador : ${operador}`);
     break;
+
     case "/":
     segundaVariable = primeraVariable;
     primeraVariable = "";
     operador = evento.target.innerText;
     console.log(`operador : ${operador}`);
     break;
+
     case "=":
     jugandoConOperadores(operador);
     function jugandoConOperadores(operador) {
@@ -80,15 +79,12 @@ console.log(`Clickando el  ${evento.target.innerText}`);
     };
     primeraVariable = "";
     break;
+
     default:
     primeraVariable = primeraVariable + evento.target.innerText;
     resultado.innerText = primeraVariable
   }
- 
 
-  
   console.log(`Esta es la primera variable: ${primeraVariable}`);
   console.log(`segunda variable: ${segundaVariable}`);
-
-
 } ;
