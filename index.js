@@ -11,7 +11,7 @@ function onClick(evento) {
   const resultado = document.querySelector(".filaCabecera");
   resultado.innerText = evento.target.innerText;
 
-console.log(`Clickando el  ${evento.target.innerText}`);
+  console.log(`Clickando el  ${evento.target.innerText}`);
   switch (evento.target.innerText) {
     case "c":
     resultado.innerText  = "0";
@@ -75,6 +75,8 @@ console.log(`Clickando el  ${evento.target.innerText}`);
         case "/":
         resultado.innerText = String(parseInt(segundaVariable) / parseInt(primeraVariable));
         break;
+        case "=":
+        resultado.innerText = String(parseInt(resultado) + parseInt(primeraVariable));
       };
     };
     primeraVariable = "";
